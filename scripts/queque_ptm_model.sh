@@ -17,10 +17,10 @@
 ### -- set the email address -- 
 # please uncomment the following line and put in your e-mail address,
 # if you want to receive e-mail notifications on a non-default address
-##BSUB -u abrisa@dtu.dk
+##BSUB -u s173461@dtu.dk
 ### -- Specify the output and error file. %J is the job-id -- 
-#BSUB -o  /zhome/ce/4/118546/deeplearning/DL_project/ptm_model_output_%J.out 
-#BSUB -e  /zhome/ce/4/118546/deeplearning/DL_project/ptm_model_output_%J.err 
+#BSUB -o  /zhome/ce/9/126583/deeplearning/DL_project/ptm_model_output_%J.out 
+#BSUB -e  /zhome/ce/9/126583/deeplearning/DL_project/ptm_model_output_%J.err 
 
 # path 
 cd /zhome/ce/4/118546/deeplearning/
@@ -29,7 +29,7 @@ cd /zhome/ce/4/118546/deeplearning/
 module swap python3/3.10.7
 
 # activate enviroment 
-source ./env/bin/activate
+source ./env/venv_1411_2/bin/activate
 
 echo 'queing is also working'
 
