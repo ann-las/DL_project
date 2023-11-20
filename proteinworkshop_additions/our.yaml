@@ -1,5 +1,5 @@
 datamodule:
-  _target_: "proteinworkshop.datasets.ptm.OurDataModule"
+  _target_: "proteinworkshop.datasets.our.OurDataModule"
   dataset_name: "our"
   path: ${env.paths.data}/TopologyPrediction/ # Directory where the dataset is stored
   batch_size: 32 # Batch size for dataloader
