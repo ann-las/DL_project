@@ -14,6 +14,9 @@ The rest is data created through this project.
 * Scripts
 * Results
 
+## Notes
+### Changes to Proteinworkshop scripts and yaml
+* /config/train change dataset to ptm instead of cath
 
 
 ## INSTALL AND RUN 
