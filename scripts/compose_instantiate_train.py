@@ -28,7 +28,7 @@ cfg = hydra.compose(
         "task=multiclass_node_classification",
         "dataset=our",
         #"features=ca_angles",
-        #"+aux_task=none",
+        "+aux_task=none",
     ],
     return_hydra_config=True,
 )
