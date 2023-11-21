@@ -185,25 +185,27 @@ class OurDataModule(ProteinDataModule):
     #            I think we can just make sure that we have downloaded them.
     # Download the PTM dataset from Zenodo. I guess we can change this part so that we just read the dataset from a file.
     # I guess we need to change this part
-    #def download_dataset(self):
-     #   """Downloads OUR dataset from Zenodo if not already downloaded."""
-      #  file_paths = [
-     #       self.root / f"OUR_{split}.json"                 # From PTM_{split}
-     #       for split in ["train", "val", "test"]
-     #   ]
+    def download_dataset(self):
+        """Downloads OUR dataset from Zenodo if not already downloaded."""
+        file_paths = [
+            self.root / f"OUR_{split}.json"                 # From PTM_{split}
+            for split in ["train", "val", "test"]
+        ]
 
-     #   # I commented this out: Maybe we should just make sure that
-     #   if self.dataset_name == "our":                 # From ptm_data (or similar)
-     #       if not all(os.path.exists(fpath) for fpath in file_paths):
-     #           log.info("Downloading OUR dataset...")
-     #           cmd = (
-     #               f"wget {self.PTM_13_URL} -O {str(self.root / '13PTM.zip')}"
-      #          )
-     #           subprocess.call(cmd, shell=True)
-      #          with zipfile.ZipFile(self.root / "13PTM.zip", "r") as zip_ref:
-      #              zip_ref.extractall(self.root)
-      #  else:
-      #      raise NotImplementedError
+        # I commented this out: Maybe we should just make sure that
+        if self.dataset_name == "our":                 # From ptm_data (or similar)
+            if not all(os.path.exists(fpath) for fpath in file_paths):
+		print("entered not all paths exists for dataset")
+		continue
+                #log.info("Downloading OUR dataset...")
+                #cmd = (
+                #    f"wget {self.PTM_13_URL} -O {str(self.root / '13PTM.zip')}"
+                #)
+                #subprocess.call(cmd, shell=True)
+                #with zipfile.ZipFile(self.root / "13PTM.zip", "r") as zip_ref:
+                #    zip_ref.extractall(self.root)
+        else:
+            raise NotImplementedError
 
   
     def parse_dataset(
