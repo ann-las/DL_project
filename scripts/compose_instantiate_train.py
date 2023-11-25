@@ -50,5 +50,5 @@ from proteinworkshop.train import train_model
 
 cfg = config.validate_config(cfg)
 
-train_model(cfg)  # Pre-train a model using the selected data
+#train_model(cfg)  # Pre-train a model using the selected data
 # finetune(cfg)  # Fine-tune a model using the selected data

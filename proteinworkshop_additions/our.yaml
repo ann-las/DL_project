@@ -8,4 +8,4 @@ datamodule:
   num_workers: 1 # Number of workers for dataloader
   transforms: ${transforms} # Transforms to apply to dataset examples
   overwrite: False # Whether to overwrite existing dataset files
-num_classes: 5 # Number of classes
+num_classes: 6 # Number of classes

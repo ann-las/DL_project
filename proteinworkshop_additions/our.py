@@ -36,7 +36,7 @@ class OurDataModule(ProteinDataModule):
         dataset_name: str = "our",
         in_memory: bool = False,
         pin_memory: bool = True,
-        num_workers: int = 16,
+        num_workers: int = 1, # Originally 16
         transforms: Optional[Iterable[Callable]] = None,
         overwrite: bool = False,
     ) -> None:
@@ -195,8 +195,8 @@ class OurDataModule(ProteinDataModule):
         # I commented this out: Maybe we should just make sure that
         if self.dataset_name == "our":                 # From ptm_data (or similar)
             if not all(os.path.exists(fpath) for fpath in file_paths):
-		print("entered not all paths exists for dataset")
-		continue
+	        #print("entered not all paths exists for dataset")
+                pass
                 #log.info("Downloading OUR dataset...")
                 #cmd = (
                 #    f"wget {self.PTM_13_URL} -O {str(self.root / '13PTM.zip')}"
@@ -258,9 +258,13 @@ class OurDataModule(ProteinDataModule):
             zip(ids, df["label"], labels)
         ):
             indices = np.array([i["site"] for i in label_data])
+            #print(indices)
             site_type = [i["topology"] for i in label_data]               # changed from ptm_type
+            #print(site_type)
             site_indices = [self.SITE_TO_NUM[i] for i in site_type]
+            #print(site_indices)
             label_tensor[indices, site_indices] = 1
+            #print(label_tensor)
             label_map[id] = label_tensor
 
         print(len(label_map))
