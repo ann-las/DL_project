@@ -26,17 +26,16 @@
 #BSUB -e  /zhome/ce/4/118546/deeplearning/DL_project/topology_model_output_%J.err 
 
 # path 
-cd /zhome/ce/4/118546/deeplearning/
+#cd /zhome/ce/4/118546/deeplearning/
 
 # modules 
 module swap python3/3.10.7
 
 # activate enviroment 
-source env/bin/activate
+source /zhome/ce/4/118546/deeplearning/env/bin/activate
 export DATA_PATH="/dtu/blackhole/17/126583/Topology"
-export SRC_PATH="zhome/cd/4/118546/deeplearning"
 
-python3 ./DL_project/scripts/compose_instantiate_train.py	
+python3 ./compose_instantiate_train.py	
 
 # Test this later 
 #workshop train dataset=topology encoder=schnet task=multiclass_node_classification trainer=cpu env.paths.data=/dtu/blackhole/17/126583/Topology env.paths.output_dir=/dtu/blackhole/17/126583/Topology/output_astrid
