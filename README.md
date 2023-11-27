@@ -27,6 +27,9 @@ The rest is data created through this project.
 mkdir DL_project
 mkdir DL_project/env
 
+# Change version of python 
+module swap python3/3.10.7
+
 # create enviroment 
 python3 -m venv ./env
 
@@ -37,22 +40,19 @@ source ./env/bin/activate
 
 ### Install in enviroment 
 ```
-# 1) Change version of python 
-module swap python3/3.10.7
-
-# 2) Install requirements (without torch stuff)
+# 1) Install requirements (without torch stuff)
 python3 -m pip install -r requirements.txt
 
-# 3) Install the protein workshop
+# 2) Install the protein workshop
 python3 -m pip install proteinworkshop --no-cache-dir
 
-# 4) Install torch stuff
+# 3) Install torch stuff
 python3 -m pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118 --no-cache-dir
 
-# 5) Install pyg
+# 4) Install pyg
 workshop install pyg
 
-# 6) Export path
+# 5) Export path
 export DATA_PATH="/dtu/blackhole/17/126583"
 ```
 
