@@ -30,7 +30,12 @@ mkdir DL_project/env
 # Change version of python 
 module swap python3/3.10.7
 
+# Clone github in the DL_project directory
+cd DL_project
+git clone https://github.com/ann-las/DL_project
+
 # create enviroment 
+cd env
 python3 -m venv ./env
 
 # activate enviroment 
