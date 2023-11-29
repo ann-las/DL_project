@@ -1,0 +1,36 @@
+# @package _global_
+
+# === 1. Set config parameters ===
+name: ""  # default name for the experiment, "" means logger (e.g., wandb) will generate a unique name
+seed: 52  # seed for random number generators in pytorch, numpy, and python.random
+num_workers: 1  # number of subprocesses to use for data loading.
+
+# === 2. Specify defaults here. Defaults will be overwritten by equivalently named options in this file ===
+defaults:
+  - env: default
+  - dataset: our
+  - features: ca_base
+  - encoder: schnet
+  - decoder: default
+  - transforms: none
+  - callbacks: default
+  - optimiser: adam
+  - scheduler: none
+  - trainer: gpu
+  - extras: default
+  - hydra: default
+  - metrics: none
+  - task: multiclass_node_classification  # See: /proteinworkshop/config/task/
+  - logger: csv  # wandb, tensorboard, csv
+  - finetune: default  # Specifies finetuning config. See: proteinworkshop/config/finetune/
+  # debugging config (enable through command line, e.g., `python train.py debug=default)
+  - debug: null
+  - _self_  # see: https://hydra.cc/docs/upgrades/1.0_to_1.1/default_composition_order/. Adding _self_ at bottom means values in this file override defaults.
+
+task_name: "evaluation"  # Changed to a more general task name
+
+# compile: True  # Assuming you don't need to recompile the model for evaluation
+compile: False  # No need to compile for evaluation
+
+# specify the path to the checkpoint for evaluation
+ckpt_path: "/dtu/blackhole/17/126583/Topology/output_test_anna/checkpoints/last.ckpt"

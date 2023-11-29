@@ -17,7 +17,7 @@ The rest is data created through this project.
 ## Notes
 ### Changes to Proteinworkshop scripts and yaml
 * /config/train change dataset to ptm instead of cath
-
+* finetune.yaml changed ?? 
 
 ## INSTALL AND RUN 
 
