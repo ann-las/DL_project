@@ -119,7 +119,7 @@ def finetune(cfg: DictConfig):
         log.info("Compiling model!")
         model = torch.compile(model)  # type: ignore
 
-    log.info("Skip finetuning")
+    log.info("Skip finetuning!") 
     #log.info("Starting finetuning!")
     #trainer.fit(model=model, datamodule=datamodule)
 
@@ -144,7 +144,8 @@ def finetune(cfg: DictConfig):
                 log.info(f"{split}: {results}")
                 wandb_logger.log_metrics(results)
         else:
-            trainer.test(model=model, datamodule=datamodule, ckpt_path="best")
+            "right.."
+            trainer.test(model=model, datamodule=datamodule, ckpt_path=cfg.ckpt_path)
 
     return metric_dict, object_dict
 
@@ -152,7 +153,7 @@ def finetune(cfg: DictConfig):
 @hydra.main(
     version_base="1.3",
     config_path=str(constants.HYDRA_CONFIG_PATH),
-    config_name="load",
+    config_name="finetune.yaml",
 )
 def _main(cfg: DictConfig) -> None:
     # apply extra utilities

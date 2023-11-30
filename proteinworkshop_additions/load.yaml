@@ -9,7 +9,7 @@ num_workers: 1  # number of subprocesses to use for data loading.
 defaults:
   - env: default
   - dataset: our
-  - features: ca_base
+  - features: ca_seq
   - encoder: schnet
   - decoder: default
   - transforms: none
@@ -31,6 +31,9 @@ task_name: "evaluation"  # Changed to a more general task name
 
 # compile: True  # Assuming you don't need to recompile the model for evaluation
 compile: False  # No need to compile for evaluation
+
+# testing 
+test: True
 
 # specify the path to the checkpoint for evaluation
 ckpt_path: "/dtu/blackhole/17/126583/Topology/output_test_anna/checkpoints/last.ckpt"

@@ -39,4 +39,7 @@ python3 compose_instantiate_train.py
 
 # Test this later 
 #python3 /zhome/ce/4/118546/deeplearning/DL_project/scripts/load_checkpoint.py dataset=our encoder=schnet task=multiclass_node_classification trainer=gpu env.paths.data=/dtu/blackhole/17/126583/Topology env.paths.output_dir=/dtu/blackhole/17/126583/Topology/output_test_astrid ckpt_path=/dtu/blackhole/17/126583/Topology/output_test_astrid/checkpoints/last.ckpt
-workshop finetune dataset=our encoder=schnet task=multiclass_node_classification trainer=gpu env.paths.data=/dtu/blackhole/17/126583/Topology env.paths.output_dir=/dtu/blackhole/17/126583/Topology/output_test_astrid ckpt_path=/dtu/blackhole/17/126583/Topology/output_test_astrid/checkpoints
+#workshop finetune dataset=our encoder=schnet task=multiclass_node_classification trainer=gpu env.paths.data=/dtu/blackhole/17/126583/Topology env.paths.output_dir=/dtu/blackhole/17/126583/Topology/output_test_astrid ckpt_path=/dtu/blackhole/17/126583/Topology/output_test_astrid/checkpoints
+
+# On PTM data
+python3 /zhome/ce/4/118546/deeplearning/DL_project/scripts/load_checkpoint.py dataset=ptm encoder=schnet task=multiclass_node_classification trainer=gpu env.paths.data=/dtu/blackhole/17/126583/Post env.paths.output_dir=/dtu/blackhole/17/126583/Post/output_test_anna_gpu_cp ckpt_path=/dtu/blackhole/17/126583/Post/output_test_anna_gpu_cp/checkpoints/last.ckpt
