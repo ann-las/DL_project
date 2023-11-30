@@ -1,0 +1,4 @@
+multihot_label_encoding:
+  _target_: proteinworkshop.tasks.multihot_label_encoding.MultiHotLabelEncoding
+  num_classes : ${dataset.num_classes}
+
