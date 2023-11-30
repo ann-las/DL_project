@@ -27,5 +27,5 @@ defaults:
   - _self_ # see: https://hydra.cc/docs/upgrades/1.0_to_1.1/default_composition_order/. Adding _self_ at bottom means values in this file override defaults.
 
 task_name: "train"
-test: False
+test: True
 #compile: True
