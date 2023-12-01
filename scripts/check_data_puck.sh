@@ -1,5 +1,4 @@
 #!/bin/sh 
-
 ### General options 
 ### -- specify queue -- 
 #BSUB -q hpc
@@ -25,9 +24,20 @@
 #BSUB -N 
 ### -- Specify the output and error file. %J is the job-id -- 
 ### -- -o and -e mean append, -oo and -eo mean overwrite -- 
-#BSUB -o Output_%J.out 
-#BSUB -e Output_%J.err 
+#BSUB -o 
+/zhome/bd/4/164330/DL_project/DL_project/output_%J.out 
+#BSUB -e 
+/zhome/bd/4/164330/DL_project/DL_project/output_%J.err 
 
-# here follow the commands you want to execute with input.in as the input file
-ptm_to_our_json_v2.py 
+# modules 
+module swap python3/3.10.7
 
+# activate enviroment 
+source /zhome/bd/4/164330/DL_project/env/env/dl_env/bin/activate
+export DATA_PATH="/dtu/blackhole/17/126583/Topology"
+export SRC_PATH="/zhome/bd/4/164330/DL_project"
+
+echo 'passed export'
+
+# run python file
+python3 ptm_to_our_json_v2.py
