@@ -38,4 +38,4 @@ export SRC_PATH="/zhome/bd/4/164330/DL_project"
 echo 'passed export'
 
 # run python file
-python3 ptm_to_our_json_v2.py
+python3 scripts/ptm_to_our_json_v2.py
