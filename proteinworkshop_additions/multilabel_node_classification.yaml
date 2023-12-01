@@ -14,10 +14,10 @@ defaults:
 
 callbacks:
   early_stopping:
-    monitor: val/node_label/accuracy
+    monitor: val/node_label/f1_score
     mode: "max"
   model_checkpoint:
-    monitor: val/node_label/accuracy
+    monitor: val/node_label/f1_score
     mode: "max"
 
 metrics:

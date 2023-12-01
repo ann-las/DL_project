@@ -42,4 +42,4 @@ export DATA_PATH="/dtu/blackhole/17/126583/Post"
 
 # run 
 #workshop download ptm
-workshop train dataset=ptm encoder=schnet task=multiclass_node_classification trainer=cpu env.paths.data=/dtu/blackhole/17/126583/Post env.paths.output_dir=/dtu/blackhole/17/126583/Post/output_test_anna_gpu
+workshop train dataset=ptm encoder=schnet task=multiclass_node_classification trainer=gpu env.paths.data=/dtu/blackhole/17/126583/Post env.paths.output_dir=/dtu/blackhole/17/126583/Post/output_test_anna_gpu
