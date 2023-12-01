@@ -7,7 +7,7 @@ import numpy as np
 # ----  Get DeepTMHMM json data -------------------
 
 # Set filename
-tmhmm_file = open("/Users/puqu/OneDrive - Danmarks Tekniske Universitet/Dokumenter/DeepTMHMM.partitions.json")
+tmhmm_file = open("\Users\puqu\OneDrive - Danmarks Tekniske Universitet\Dokumenter\DeepTMHMM.partitions.json")
 
 # Load json data
 tmhmm_data = json.load(tmhmm_file)
@@ -47,22 +47,22 @@ test_dict = our_dict['cv4']
 # ---- Create json files -------------------------
 
 # Full dict
-full_dict_outfile = open("/Users/puqu/OneDrive - Danmarks Tekniske Universitet/Dokumenter/our_data_full.json", "w")
+full_dict_outfile = open("\Users\puqu\OneDrive - Danmarks Tekniske Universitet\Dokumenter\our_data_full.json", "w")
 json.dump(our_dict, full_dict_outfile)
 full_dict_outfile.close()
 
 # Train
-train_dict_outfile = open("/Users/puqu/OneDrive - Danmarks Tekniske Universitet/Dokumenter/our_train.json", "w")
+train_dict_outfile = open("\Users\puqu\OneDrive - Danmarks Tekniske Universitet\Dokumenter\our_train.json", "w")
 json.dump(train_dict, train_dict_outfile)
 train_dict_outfile.close()
 
 # Validation
-val_dict_outfile = open("/Users/puqu/OneDrive - Danmarks Tekniske Universitet/Dokumenter/our_val.json", "w")
+val_dict_outfile = open("\Users\puqu\OneDrive - Danmarks Tekniske Universitet\Dokumenter\our_val.json", "w")
 json.dump(val_dict, val_dict_outfile)
 val_dict_outfile.close()
 
 # Test
-test_dict_outfile = open("/Users/puqu/OneDrive - Danmarks Tekniske Universitet/Dokumenter/our_test.json", "w")
+test_dict_outfile = open("\Users\puqu\OneDrive - Danmarks Tekniske Universitet\Dokumenter\our_test.json", "w")
 json.dump(test_dict, test_dict_outfile)
 test_dict_outfile.close()
 
