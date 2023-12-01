@@ -24,10 +24,8 @@
 #BSUB -N 
 ### -- Specify the output and error file. %J is the job-id -- 
 ### -- -o and -e mean append, -oo and -eo mean overwrite -- 
-#BSUB -o 
-/zhome/bd/4/164330/DL_project/DL_project/output_%J.out 
-#BSUB -e 
-/zhome/bd/4/164330/DL_project/DL_project/output_%J.err 
+#BSUB -o /zhome/bd/4/164330/DL_project/topology_model_output_lr.out
+#BSUB -e /zhome/bd/4/164330/DL_project/topology_model_output_lr.err
 
 # modules 
 module swap python3/3.10.7
