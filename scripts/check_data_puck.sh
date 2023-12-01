@@ -31,7 +31,7 @@
 module swap python3/3.10.7
 
 # activate enviroment 
-source /zhome/bd/4/164330/DL_project/env/env/dl_env/bin/activate
+source /zhome/bd/4/164330/DL_project/env/env/bin/activate
 export DATA_PATH="/dtu/blackhole/17/126583/Topology"
 export SRC_PATH="/zhome/bd/4/164330/DL_project"
 
