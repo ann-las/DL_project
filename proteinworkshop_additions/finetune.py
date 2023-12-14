@@ -145,7 +145,7 @@ def finetune(cfg: DictConfig):
                 wandb_logger.log_metrics(results)
         else:
             log.info("should print stuff now:  ")
-            trainer.test(model=model, verbose=True, datamodule=datamodule, ckpt_path=cfg.ckpt_path)
+            trainer.test(model=model, verbose=True, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
             #trainer.predict(model=model, datamodule=datamodule, ckpt_path=cfg.ckpt_path, return_predictions=True)
 
     return metric_dict, object_dict

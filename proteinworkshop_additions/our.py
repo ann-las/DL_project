@@ -114,6 +114,7 @@ class OurDataModule(ProteinDataModule):
                 site: i for i, site in enumerate(self.SITE_TYPES)
             }
             self.NUM_TO_SITE = {v: k for k, v in self.SITE_TO_NUM.items()}
+            print('site_to_num', self.SITE_TO_NUM)
         #elif self.dataset_name == "optm":
         #    raise NotImplementedError
 
@@ -230,7 +231,7 @@ class OurDataModule(ProteinDataModule):
         ]
         data["uniprot_id"] = data["uniprot_id"].str.lower()
         data["length"] = data["seq"].apply(len)
-        print(data)
+        #print(data)
 
         # Check if any of the structures are unavailable=
         data = data[~data["uniprot_id"].isin(self.unavailable_structures)]
@@ -267,7 +268,7 @@ class OurDataModule(ProteinDataModule):
             #print(label_tensor)
             label_map[id] = label_tensor
 
-        print(len(label_map))
+        #print('laebl map', label_map)
         return label_map
 
     def _get_dataset(self, split: str) -> ProteinDataset:

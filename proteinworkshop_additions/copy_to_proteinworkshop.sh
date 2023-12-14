@@ -9,6 +9,15 @@ cp ./Project/DL_project/proteinworkshop_additions/multilabel_node_classification
 cp ./Project/DL_project/proteinworkshop_additions/multihot_label_encoding.yaml ./env/dl_env/lib/python3.10/site-packages/proteinworkshop/config/transforms/multihot_label_encoding.yaml
 cp ./Project/DL_project/proteinworkshop_additions/node_label.yaml ./env/dl_env/lib/python3.10/site-packages/proteinworkshop/config/decoder/node_label.yaml
 cp ./Project/DL_project/proteinworkshop_additions/train.yaml ./env/dl_env/lib/python3.10/site-packages/proteinworkshop/config/train.yaml
+cp ./Project/DL_project/proteinworkshop_additions/finetune.yaml ./env/dl_env/lib/python3.10/site-packages/proteinworkshop/config/finetune.yaml
+cp ./Project/DL_project/proteinworkshop_additions/finetune.py ./env/dl_env/lib/python3.10/site-packages/proteinworkshop/finetune.py
+cp ./Project/DL_project/proteinworkshop_additions/visualise.yaml ./env/dl_env/lib/python3.10/site-packages/proteinworkshop/config/visualise.yaml
+cp ./Project/DL_project/proteinworkshop_additions/visualise.py ./env/dl_env/lib/python3.10/site-packages/proteinworkshop/visualise.py
+cp ./Project/DL_project/proteinworkshop_additions/train.py ./env/dl_env/lib/python3.10/site-packages/proteinworkshop/train.py
+cp ./Project/DL_project/proteinworkshop_additions/f1_score.yaml ./env/dl_env/lib/python3.10/site-packages/proteinworkshop/config/metrics/f1_score.yaml
+cp ./Project/DL_project/proteinworkshop_additions/utils.py ./env/dl_env/lib/python3.10/site-packages/proteinworkshop/models/utils.py
+cp ./Project/DL_project/proteinworkshop_additions/base_models.py ./env/dl_env/lib/python3.10/site-packages/proteinworkshop/models/base.py
+
 # Astrid path
 #cd /zhome/ce/4/118546/deeplearning
 
