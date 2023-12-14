@@ -26,10 +26,6 @@ All scripts nessary to reproduce the results of this project
 * Results
 Plots created by the scripts
 
-## Notes
-### Changes to Proteinworkshop scripts and yaml
-* /config/train change dataset to ptm instead of cath
-* finetune.yaml changed ?? 
 
 ## How to run this project:
 If you wish to reproduce the results of this project it is nessary to 
