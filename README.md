@@ -7,12 +7,10 @@ parts of a protein is  membrane-bound using protein 3D-structure and Graph Neura
 ## FOLDERS 
 In this project the following structure is applied: 
 * Data
-- raw_data: Contains the data that is collected prior to this project. There is a readme.txt describeing when and where is data has been aquired. It is all the nessarry data to re-create this project. 
-- TopologyPrediction
-Contains two folders 1) with the structures from alphafold (due to size 
-constraints on github only an example is uploaded, the remaining can be 
-downloaded with a provided script, see further down).
-2) our: which contains the partions in json files and a list of unaviable 
+	- raw_data: Contains the data that is collected prior to this project. There is a readme.txt describeing when and where is data has been aquired. It is all the nessarry data to re-create this project. 
+	- TopologyPrediction: Contains two folders 
+		1) with the structures from alphafold (due to size constraints on github only an example is uploaded, the remaining can be downloaded with a provided script, see further down). 
+		2) our: which contains the partions in json files and a list of unaviable 
 structures.  
 
 
