@@ -76,7 +76,7 @@ export DATA_PATH="/dtu/blackhole/17/126583"
 
 ### Import modifications to proteinworkshop model  
 Now the protein workshop is installed. Now copy our adjusted scripts and 
-config files from the folder proteinworkshop_additions. 
+config files (based on scripts and config files from the Protein Workshop) from the folder proteinworkshop_additions. 
 Run with your full path to the created enviroment containing 
 proteinworkshop. 
 
@@ -125,11 +125,29 @@ workshop finetune dataset=our encoder=schnet  ++encoder.hidden_channels=206 ++en
 trainer=gpu env.paths.data=./Data env.paths.output_dir=/your/output/path ckpt_path=./Model/checkpoints/last-v1.ckpt
 ```
 
+If this doesn't work, another option is to add the path to the desired ckpt-file to the script proteinworkshop_additions/train.py in line 206 and then copy the change to the proteinworkshop file:
+
+```
+IN LINE 206, proteinworkshop_additions/train.py:
+trainer.test(model=model, datamodule=datamodule, ckpt_path="path/to/desired_ckpt.ckpt")
+
+./copy_workshop_additions.sh /path/to/env/
+```
+
+and then initiate a training session, but evaluating the test data based on the given ckpt-file:
+
+```
+workshop train dataset=our encoder=schnet  ++encoder.hidden_channels=206 ++encoder.num_layers=3 ++encoder.num_filters=64 
+++encoder.num_gaussians=100 ++optimiser.optimizer.lr=0.001 ++trainer.max_epochs=1 ++optimiser.optimizer.weight_decay=0.0001 
+++callbacks.early_stopping.monitor=val/loss/node_label ++callbacks.early_stopping.patience=80 task=multiclass_node_classification 
+trainer=gpu env.paths.data=./Data env.paths.output_dir=/your/output/path
+```
+
 
 ### Running on HPC 
 ```
 # submit to queque 
 bsub < queqing.sh
-#check queque
+#check queue
 bstat
 ```
