@@ -125,10 +125,9 @@ workshop finetune dataset=our encoder=schnet  ++encoder.hidden_channels=206 ++en
 trainer=gpu env.paths.data=./Data env.paths.output_dir=/your/output/path ckpt_path=./Model/checkpoints/last-v1.ckpt
 ```
 
-If this doesn't work, another option is to add the path to the desired ckpt-file to the script proteinworkshop_additions/train.py in line 206 and then copy the change to the proteinworkshop file:
+If this doesn't work, another option is to add the path to the desired ckpt-file to the script proteinworkshop_additions/train.py in line 206 (remove # from this line) and then copy the change to the proteinworkshop file:
 
 ```
-IN LINE 206, proteinworkshop_additions/train.py:
 trainer.test(model=model, datamodule=datamodule, ckpt_path="path/to/desired_ckpt.ckpt")
 
 ./copy_workshop_additions.sh /path/to/env/
