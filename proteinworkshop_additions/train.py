@@ -203,8 +203,9 @@ def train_model(
                 log.info(f"{split}: {results}")
                 wandb_logger.log_metrics(results)
         else:
-            trainer.test(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
-            #trainer.test(model=model, datamodule=datamodule, ckpt_path="best")
+            #trainer.test(model=model, datamodule=datamodule, ckpt_path="/path/to/desired_ckpt.ckpt")       # For testing with desired ckpt file
+            trainer.test(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))                # For testing with ckpt created at the end of training
+            #trainer.test(model=model, datamodule=datamodule, ckpt_path="best")                             # For testing with ckpt file of best epoch
             #test_res = trainer.test(model=model, datamodule=datamodule, ckpt_path="best")
             #json_file_path = "/dtu/blackhole/17/126583/Topology/output_test_astrid_v2/test_res.json"
             #with open(json_file_path, "w") as json_file:
