@@ -1,5 +1,8 @@
 # DL_project
 
+Authors: Anna Schrøder Lassen (173461), Astrid Brix Saksager (abrisa) & Puck Quarles van Ufford (puqu)
+Date: December 2023
+
 ## AIM 
 This project aims at classifing amino acids residues to determine which 
 parts of a protein is  membrane-bound using protein 3D-structure and Graph Neural Networks. This is done using the Protein Workshop (DOI 10.5281/zenodo.8282469).
