@@ -90,6 +90,7 @@ cd proteinworkshop_additions
 ## Downloading the data 
 
 Data was downloaded from Alpha Fold using _scripts/download_pdb_data.py_. 
+We adapted data from the DeepTMHMM json file to a json file with a format appropriate for the Protein Workshop pipeline using the script _scripts/ptm_to_our_json.py_. 
 
 ## Training the Model
 
