@@ -89,7 +89,7 @@ cd proteinworkshop_additions
 
 ## Downloading the data 
 
-
+Data was downloaded from Alpha Fold using _scripts/download_pdb_data.py_. 
 
 ## Training the Model
 
