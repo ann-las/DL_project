@@ -144,10 +144,9 @@ def finetune(cfg: DictConfig):
                 log.info(f"{split}: {results}")
                 wandb_logger.log_metrics(results)
         else:
-            log.info("should print stuff now:  ")
-            trainer.test(model=model, verbose=True, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
-            #trainer.predict(model=model, datamodule=datamodule, ckpt_path=cfg.ckpt_path, return_predictions=True)
-
+            #trainer.test(model=model, datamodule=datamodule, ckpt_path="/path/to/desired_ckpt.ckpt")       # For testing with desired ckpt file
+            trainer.test(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))                # For testing with ckpt created at the end of training
+            #trainer.test(model=model, datamodule=datamodule, ckpt_path="best")                             # For testing with ckpt file of best epoch
     return metric_dict, object_dict
 
 
