@@ -1,6 +1,7 @@
 # DL_project
 
 Authors: Anna Schrøder Lassen (173461), Astrid Brix Saksager (abrisa) & Puck Quarles van Ufford (puqu)
+
 Date: December 2023
 
 ## AIM 
