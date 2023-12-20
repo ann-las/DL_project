@@ -154,6 +154,7 @@ bstat
 
 ## Recreation of results from the report
 
+We have provided trained models (for epoch 0 and 192 of our training) in the form of ckpt-files in the folder _Model/checkpoints_. Obtaining the output data used for the results presented in the report requires testing the data as described in "Test the model" above, which again requires modifying the scripts downloaded from the Protein Workshop with the modified scripts presented in _proteinworkshop_additions_. Here, we provide the output from such a test. This contains csv-files (with metrics for each epoch), F1 scores as std-out, and extracted data for prediction and target encodings compared by the Protein Workshop. In addition, we provide Jupyter notebooks used to evaluate these output results.
 
 
 Jupyter notebooks for recreating results: 
