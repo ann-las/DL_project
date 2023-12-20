@@ -158,7 +158,7 @@ bstat
 
 ## Recreation of results from the report
 
-Ideally, we would like to have provided a Jupyter notebook obtaining the results for the report from our final trained model. However, this project is based on 
+Ideally, we would like to have provided a Jupyter notebook obtaining the results for the report from our final trained model. However, this project is based on the framework from the ProteinWorkshop which operates in Linux-like systems, 
 
 We have provided trained models (for epoch 0 and 192 of our training) in the form of ckpt-files in the folder _Model/checkpoints_:
 - epoch_0_macro_training.ckpt (model at epoch 0 of training using F1 macro measure)
