@@ -178,7 +178,7 @@ Obtaining the output data used for the results presented in the report requires 
 Jupyter notebooks for recreating results: 
 - _scripts/calculate_deepTMHMM_metrics.ipynp_
 - _scripts/metrics_with_confusion_matrix.ipynp_
-- _scripts/metrics_with_confusion_matrix.ipynp_
+- _scripts/create_final_plots.ipynp_
 - _scripts/plot_accuracies.ipynp_
 
 The main results in the report can be recreated as follows: 
