@@ -161,7 +161,7 @@ bstat
 Ideally, we would like to have provided a Jupyter notebook obtaining the results directly from our final trained model. However, this project is based on the framework from the ProteinWorkshop which operates in Linux-like systems and wraps a complex network of python scripts, and creating a fully working setup has been troublesome both on DTU HPC and in Jupyter/Colab. Additionally, we have created several scripts which must overwrite the actual Protein Workshop scripts in order to make it work for our needs. 
 We have therefore instead:
 - Tried to document as well as possible the way we have used the Protein Workshop, applied the modifying scripts (in _proteinworkshop_additions_) to the Protein Workshop package (see above in this README.md), and trained models.
-- Uploaded to this github our final trained models (see below).
+- Uploaded to this github our final trained models in the format of ckpt-files (see below).
 - Described how we, with the Protein Workshop framework, have obtained outputs (such as loss, accuracy, output predictions) from the trained model used to prepare the presented results in our report (both for training and for the final test data) (see description above and text below).
 - Applied Jupyter notebooks which create the results based on the output from the trained models (see below).
 
