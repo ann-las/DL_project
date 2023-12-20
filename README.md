@@ -34,7 +34,7 @@ github: https://github.com/a-r-j/ProteinWorkshop.git
 
 ## INSTALL AND RUN 
 
-### Create enviroment
+### Create environment
 
 ```
 mkdir DL_project
@@ -47,16 +47,16 @@ module swap python3/3.10.7
 cd DL_project
 git clone https://github.com/ann-las/DL_project
 
-# create enviroment 
+# create environment 
 cd env
 python3 -m venv ./env
 
-# activate enviroment 
+# activate environment 
 source ./env/bin/activate 
 ```
 
 
-### Install in enviroment 
+### Install in environment 
 ```
 # 1) Install requirements (without torch stuff)
 python3 -m pip install -r requirements.txt
@@ -150,3 +150,26 @@ bsub < queqing.sh
 #check queue
 bstat
 ```
+
+
+## Recreation of results from the report
+
+
+
+Jupyter notebooks for recreating results: 
+- _scripts/calculate_deepTMHMM_metrics.ipynp_
+- _scripts/metrics_with_confusion_matrix.ipynp_
+
+
+
+The main results in the report can be recreated as follows: 
+
+1) **Obtaining F1 scores for Table 3**:
+   - Obtaining F1 scores for our model from model checkpoints is done using the desired checkpoint files and testing the model as described in "Test the model". The F1 score will appear as output from std-out. We have used the checkpoint files _Model/Checkpoints/_ for F1 Micro (epoch 0), _Model/Checkpoints/_ for F1 Micro (epoch 192),  _Model/Checkpoints/_ for F1 Macro (epoch 0) and  _Model/Checkpoints/_ for F1 Macro (epoch 192).
+   - Obtaining F1 scores for DeepTMHMM is done using the Jupyter notebook _scripts/calculate_deepTMHMM_metrics.ipynp_ using the topology predictions made by DeepTMHMM for the test data partition we use for our model. The DeepTMHMM topology predictions for all proteins is found in _Data/DeepTMHMM/predictions_deeptmhmm.txt_ obtained from https://biolib-public-assets.s3.eu-west-1.amazonaws.com/deeptmhmm/DeepTMHMM.crossval.top (Jeppe Hallgren, Konstantinos D. Tsirigos, Mads D. Pedersen, José Juan Almagro Armenteros, Paolo Marcatili, Henrik Nielsen, Anders Krogh and Ole Winther (2022). DeepTMHMM predicts alpha and beta transmembrane proteins using deep neural networks. https://doi.org/10.1101/2022.04.08.487609). In _Data/DeepTMHMM/predictions_deeptmhmm.txt_, the user must provide user paths for the files _Data/DeepTMHMM/predictions_deeptmhmm.txt_ and _Data/TopologyPrediction/our/our_test.json_. 
+
+3) **Obtaining type and topology accuracies for Figure 5**: When the test data is tested based on a ckpt-file (see "Test to model"), we extract the output and target encodings compared by the Protein Workshop framework and save them to the files _Model/ComparedOutput/*prediction.txt_ and _Model/ComparedOutput/*_target.txt_. These files are used in the Jupyter notebook _scripts/metrics_with_confusion_matrix.ipynp_ to calculate type and topology accuracies for the output and target data. Accuracies for predictions by DeepTMHMM on the test set are also calculated in this notebook. To run the notebook, the user must provide user paths for the files _Data/DeepTMHMM/predictions_deeptmhmm.txt_, _Data/TopologyPrediction/our/our_test.json_, _Model/ComparedOutput/micro_end_prediction.txt_ and _Model/ComparedOutput/micro_end_target.txt_. The notebook also uses a one-hot-encoding dictionary from the particular test run made by the Protein Workshop. This is included for the calculations for the end of training for F1 micro which is also what is presented in the report. The plots made for Figure 5 are created. with the script _scripts/plot_accuracies.ipynp_
+
+4) **Obtaining loss and F1 score trajectories for Figure 4**: The presentation of loss and F1 scores are made with the script _scripts/create_final_plots.ipynp_ and are based on csv-files which are produced during the training the model and contain epoch, training and validation loss and metrics data for the training. The user should provide user paths for _Model/csvFiles/output_v34.csv_ (final experiment), _Model/csvFiles/micro_end_metrics.csv_ (metrics for the training with F1 micro), _Model/csvFiles/macro_end_metrics.csv_ (metrics for the training with F1 macro) and _Model/csvFiles/softmax_metrics.csv_ (metrics for softmax experiment).
+
+
