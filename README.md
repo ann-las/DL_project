@@ -11,7 +11,8 @@ In this project the following structure is applied:
 	- TopologyPrediction: Contains two folders 
 		1) with the structures from alphafold (due to size constraints on github only an example is uploaded, the remaining can be downloaded with a provided script, see further down). 
 		2) our: which contains the partions in json files and a list of unaviable 
-structures.  
+structures.
+        - DeepTMHMM: Contains topology predictions made by DeepTMHMM (Jeppe Hallgren, Konstantinos D. Tsirigos, Mads D. Pedersen, José Juan Almagro Armenteros, Paolo Marcatili, Henrik Nielsen, Anders Krogh and Ole Winther (2022). DeepTMHMM predicts alpha and beta transmembrane proteins using deep neural networks. https://doi.org/10.1101/2022.04.08.487609) on the included proteins.
 
 
 * Model 
