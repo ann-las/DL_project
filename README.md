@@ -110,7 +110,7 @@ echo 'passed export'
 python3 compose_instantiate_train.py   
 
 workshop train dataset=our encoder=schnet  ++encoder.hidden_channels=206 ++encoder.num_layers=3 ++encoder.num_filters=64 
-++encoder.num_gaussians=100 ++optimiser.optimizer.lr=0.001 ++trainer.max_epochs=10 ++optimiser.optimizer.weight_decay=0.0001 
+++encoder.num_gaussians=100 ++optimiser.optimizer.lr=0.001 ++trainer.max_epochs=500 ++optimiser.optimizer.weight_decay=0.0001 
 ++callbacks.early_stopping.monitor=val/loss/node_label ++callbacks.early_stopping.patience=80 task=multiclass_node_classification 
 trainer=gpu env.paths.data=./Data env.paths.output_dir=/your/output/path
 ```
