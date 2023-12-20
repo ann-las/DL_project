@@ -8,6 +8,8 @@ The relevant scripts are:
 
 **download_pdb_data.py**: Download pdb data from alphafold based on the list of accession numbers 
 
+**load_checkpoint.py**: Entry point for finetuning a pretrained model.
+
 **metrics_with_confusion_matrix.ipynb**: Create accuracy metrics for model predictions and DeepTMHMM predictions
 
 **plot_accuracies.ipynb** + **plot_accuracies.R**: Plot accuracies for model predictions and DeepTMHMM predictions
@@ -16,14 +18,5 @@ The relevant scripts are:
 
 **queue_topology_models_gpu_anna.sh** : A queue script for running the model on DTU HPC
 
-
-
-
-
-????
-evaluate_outcome.py
-python_use_model_featureiser.py
-evaluate_outcome.py
-load_checkpoint
 
 
